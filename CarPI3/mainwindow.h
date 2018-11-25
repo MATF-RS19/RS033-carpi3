@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+extern QMap<QString, int> variableMap;
+
 namespace Ui {
 class MainWindow;
 }
@@ -21,6 +23,10 @@ class MainWindow : public QWidget
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+protected:
+    void keyPressEvent(QKeyEvent *event);
+    void keyReleaseEvent(QKeyEvent *event);
 
 private slots:
     void on_buttonCamera_clicked();
