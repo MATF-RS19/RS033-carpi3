@@ -3,6 +3,7 @@
 #include <QDebug>
 
 QMap<QString, int> variableMap;
+QList<QString> queue;
 
 int main(int argc, char *argv[])
 {

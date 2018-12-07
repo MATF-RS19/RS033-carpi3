@@ -4,6 +4,7 @@
 #include <QWidget>
 
 extern QMap<QString, int> variableMap;
+extern QList<QString> queue;
 
 namespace Ui {
 class MainWindow;
