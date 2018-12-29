@@ -5,8 +5,7 @@
 QMap<QString, int> variableMap;
 QList<QString> queue;
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
     MainWindow mainWindow;
     mainWindow.show();

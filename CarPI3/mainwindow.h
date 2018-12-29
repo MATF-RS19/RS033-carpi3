@@ -16,6 +16,7 @@ class QCameraImageCapture;
 class QVBoxLayout;
 class QSerialPort;
 class QString;
+class QTimer;
 
 class MainWindow : public QWidget
 {
@@ -37,6 +38,7 @@ private slots:
     void on_buttonHeadlights_clicked();
     void on_buttonReverse_clicked();
     void on_buttonEngine_clicked();
+    void on_Timer();
 
 private:
     Ui::MainWindow *ui;
@@ -45,7 +47,8 @@ private:
     QCamera *mainCamera;
     QCameraViewfinder *mainCameraViewFinder;
     QVBoxLayout *mainCameraLayout;
-
+    QSerialPort *serialOutput;
+    QTimer *timer;
 };
 
 #endif // MAINWINDOW_H

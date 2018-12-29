@@ -55,13 +55,11 @@ MainWindow::MainWindow(QWidget *parent)
     if(!serialOutput->open(QIODevice::ReadWrite))
         qFatal("ERROR: Opening port failed.");
 
-    /* Connection Feeder */
-
-    /*
+    /* Connection Feeder 
+     * 
      * QSerial is non-blocking and it causes problems when called from
      * another thread. So, we implemented QTimer for sending data
      */
-
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(on_Timer()));
     timer->start(100);
